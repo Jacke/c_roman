@@ -62,7 +62,10 @@
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/unicodeobject.h
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/warnings.h
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/weakrefobject.h
+02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Users/stan/Dev/c_roman/decimal_to_roman.c
+02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Users/stan/Dev/c_roman/number_converter.h
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: 02-ExposingClasses/classes.cpp
+02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /Users/stan/Dev/c_roman/roman_to_decimal.c
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /usr/local/include/boost/aligned_storage.hpp
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /usr/local/include/boost/array.hpp
 02-ExposingClasses/CMakeFiles/classes.dir/classes.cpp.o: /usr/local/include/boost/assert.hpp

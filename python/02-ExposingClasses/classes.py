@@ -10,3 +10,5 @@ t.many(['Good Morning', 'Buon giorno', 'Kali mera'])
 print (t.greet())
 
 
+print ("decimalToRoman: ", t.decimalToRoman(13))
+print ("romanToDecimal: ", t.romanToDecimal("XII"))

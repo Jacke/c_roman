@@ -63,7 +63,10 @@
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/unicodeobject.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/warnings.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/python2.7/weakrefobject.h
+ /Users/stan/Dev/c_roman/decimal_to_roman.c
+ /Users/stan/Dev/c_roman/number_converter.h
  /Users/stan/Dev/c_roman/python/02-ExposingClasses/classes.cpp
+ /Users/stan/Dev/c_roman/roman_to_decimal.c
  /usr/local/include/boost/aligned_storage.hpp
  /usr/local/include/boost/array.hpp
  /usr/local/include/boost/assert.hpp
