@@ -13,10 +13,11 @@
 char * decimal_to_roman(int num) 
 {   
     int rem;
-    char * result;
-    if((result = malloc(19+1)) != NULL){
-      result[0] = '\0';
-    }
+    char * resultStorage = (char *) malloc(sizeof("mcmdcdcxclxlxixvivi"));
+    char * result = resultStorage;
+    //if((result = malloc(19+1)) != NULL){
+    result[0] = '\0';
+    //}
     // printf("Enter a number: ");
     // scanf("%d", &num);
     // printf("Roman numerals: ");        
@@ -104,12 +105,3 @@ char * decimal_to_roman(int num)
     }
     return result;
 }
-
-
-/*
-int main() {
-   char * a = decimal_to_roman(13);
-   printf("%s", a);
-   return 0;
-}
-*/

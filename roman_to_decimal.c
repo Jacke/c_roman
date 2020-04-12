@@ -73,11 +73,3 @@ int convert(char ch)
    }
    return value;
 }
-
-/*
-int main() {
-   int result = proccessNumber("XII");
-   printf("%i", result);
-   return 0;
-}
-*/
