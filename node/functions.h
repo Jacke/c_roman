@@ -10,6 +10,8 @@ NAN_METHOD(nothing);
 NAN_METHOD(aString);
 NAN_METHOD(aBoolean);
 NAN_METHOD(aNumber);
+NAN_METHOD(fromRoman);
+NAN_METHOD(toRoman);
 NAN_METHOD(anObject);
 NAN_METHOD(anArray);
 NAN_METHOD(callback);

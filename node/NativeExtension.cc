@@ -18,6 +18,10 @@ NAN_MODULE_INIT(InitAll) {
     Nan::GetFunction(Nan::New<FunctionTemplate>(anObject)).ToLocalChecked());
   Nan::Set(target, Nan::New("anArray").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(anArray)).ToLocalChecked());
+  Nan::Set(target, Nan::New("toRoman").ToLocalChecked(),
+    Nan::GetFunction(Nan::New<FunctionTemplate>(toRoman)).ToLocalChecked());
+  Nan::Set(target, Nan::New("fromRoman").ToLocalChecked(),
+    Nan::GetFunction(Nan::New<FunctionTemplate>(fromRoman)).ToLocalChecked());
   Nan::Set(target, Nan::New("callback").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(callback)).ToLocalChecked());
   Nan::Set(target, Nan::New("callbackWithParameter").ToLocalChecked(),

@@ -1,0 +1,7 @@
+/Users/stan/Dev/c_roman/python/CMakeFiles/rebuild_cache.dir
+/Users/stan/Dev/c_roman/python/CMakeFiles/edit_cache.dir
+/Users/stan/Dev/c_roman/python/CMakeFiles/test.dir
+/Users/stan/Dev/c_roman/python/02-ExposingClasses/CMakeFiles/rebuild_cache.dir
+/Users/stan/Dev/c_roman/python/02-ExposingClasses/CMakeFiles/edit_cache.dir
+/Users/stan/Dev/c_roman/python/02-ExposingClasses/CMakeFiles/test.dir
+/Users/stan/Dev/c_roman/python/02-ExposingClasses/CMakeFiles/classes.dir

@@ -1,5 +1,4 @@
-#include "decimal_to_roman.c"
-#include "roman_to_decimal.c"
+#include "number_converter.h"
 
 int main() {
    int result = proccessNumber("XII");

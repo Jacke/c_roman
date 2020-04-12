@@ -1,25 +1,17 @@
-edit : main.o kbd.o command.o display.o \
-       insert.o search.o files.o utils.o
-        cc -o edit main.o kbd.o command.o display.o \
-                   insert.o search.o files.o utils.o
+CC      = cc
 
-main.o : main.c defs.h
-        cc -c main.c
-kbd.o : kbd.c defs.h command.h
-        cc -c kbd.c
-command.o : command.c defs.h command.h
-        cc -c command.c
-display.o : display.c defs.h buffer.h
-        cc -c display.c
-insert.o : insert.c defs.h buffer.h
-        cc -c insert.c
-search.o : search.c defs.h buffer.h
-        cc -c search.c
-files.o : files.c defs.h buffer.h command.h
-        cc -c files.c
-utils.o : utils.c defs.h
-        cc -c utils.c
-clean :
-        rm edit main.o kbd.o command.o display.o \
-           insert.o search.o files.o utils.o
+c_bin : main.o maincpp.o decimal_to_roman.o roman_to_decimal.o number_converter.h
+			$(CC) -o c_bin main.o
+cpp_bin : main.o maincpp.o decimal_to_roman.o roman_to_decimal.o number_converter.h
+			$(CC) -o cpp_bin maincpp.o
+decimal_to_roman.o : decimal_to_roman.c
+			$(CC) -c decimal_to_roman.c
+roman_to_decimal.o : roman_to_decimal.c
+			$(CC) -c roman_to_decimal.c
+main.o : main.c
+			$(CC) -c main.c
+maincpp.o : maincpp.cpp
+			$(CC) -c maincpp.cpp			
+clean : 
+			rm -rf c_bin cpp_bin main.o decimal_to_roman.o roman_to_decimal.o maincpp.o
 
