@@ -1,4 +1,6 @@
 #include "functions.h"
+#include "../number_converter.h"
+
 
 NAN_METHOD(nothing)
 {
@@ -37,20 +39,49 @@ NAN_METHOD(anArray)
 
 NAN_METHOD(fromRoman)
 {
+
   v8::Isolate *isolate = info.GetIsolate();
-  std::string str ("Please split this sentence into tokens"); 
-  v8::Local<v8::String> v8str = v8::String::NewFromUtf8(isolate, str.c_str()).ToLocalChecked();  
-  // TODO: Add logic for fromRoman
-  info.GetReturnValue().Set(Nan::To<v8::String>(info[0]).FromMaybe(v8str));
+  auto context = isolate->GetCurrentContext();
+  //v8::String arg = info[0]->ToString(context).ToLocalChecked();
+
+  // v8::String::Utf8Value utf8(info[0]->ToString(context));
+  // int len = utf8.length() + 1;
+  // char *str = (char *) calloc(sizeof(char), len);
+  // strncpy(str, *utf8, len);
+
+  // std::string str(*v8::String::Utf8Value(info[0].As<v8::String>());
+
+  //v8::String::Utf8Value utfValue(str);
+
+  //char* parsedValue = *value ? *value : "<string conversion failed>";
+  
+  v8::Local<v8::String> test = info[0].As<v8::String>();
+  v8::String::Utf8Value resultt(isolate, test);
+  const char* parsedValue = *resultt ? *resultt : "<string conversion failed>";
+
+  // v8::String::NewFromUtf8 
+  Nan::Utf8String utf8_value(info[0]);
+  int len = utf8_value.length();
+  if (len <= 0) {
+     return Nan::ThrowTypeError("arg must be a non-empty string");
+  }
+  std::string string_copy(*utf8_value, len);
+
+  int result = proccessNumber((char*) parsedValue);//string_copy.c_str());
+  info.GetReturnValue().Set(result);
 }
 
 NAN_METHOD(toRoman)
 {
   v8::Isolate *isolate = info.GetIsolate();
   std::string str ("Please split this sentence into tokens"); 
-  v8::Local<v8::String> v8str = v8::String::NewFromUtf8(isolate, str.c_str()).ToLocalChecked();  
-  // TODO: Add logic for toRoman
-  info.GetReturnValue().Set(Nan::To<v8::String>(info[0]).FromMaybe(v8str));
+  std::string a = decimal_to_roman(Nan::To<int>(info[0]).FromJust());
+  // std::string arg0 = *Nan::Utf8String(info[0]);
+
+  v8::Local<v8::String> returned_str = v8::String::NewFromUtf8(isolate, a.c_str(), 
+    v8::NewStringType::kNormal).ToLocalChecked();
+
+  info.GetReturnValue().Set(returned_str);
 }
 
 NAN_METHOD(callback)
