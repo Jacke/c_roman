@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+node_modules/
+node/node_modules/*
+
 # Object files
 *.o
 *.ko

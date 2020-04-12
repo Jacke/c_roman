@@ -11,13 +11,13 @@
 
 int convert(char);  //function prototype of conversion function
 
-int main ()
+int proccessNumber(char romanNumber[100]) //array for storing roman number
 {
    int i = 0, num = 0;
-   char romanNumber[100]; //array for storing roman number
 
-   printf("Enter Roman number: ");
-   scanf("%s", romanNumber);
+   //   char romanNumber[100]; //array for storing roman number
+   // printf("Enter Roman number: ");
+   // scanf("%s", romanNumber);
 
    while(romanNumber[ i ])
    {
@@ -51,7 +51,7 @@ int main ()
 
    //displaying converted number
    printf("\nEquivalent decimal number: %d\n", num);
-   return 0;
+   return num;
 }
 
 //converting roman number into equivalent decimal value
@@ -73,3 +73,11 @@ int convert(char ch)
    }
    return value;
 }
+
+/*
+int main() {
+   int result = proccessNumber("XII");
+   printf("%i", result);
+   return 0;
+}
+*/
